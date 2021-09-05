@@ -1,0 +1,17 @@
+kind: Ingress
+apiVersion: extensions/v1beta1
+metadata:
+  name:  frontend-ingress-ui
+  labels:
+    app:  frontend-ingress-ui
+    type : frontend
+spec :
+  rules :
+  - http : 
+      paths : 
+      - path : /voting
+        backend : 
+          serviceName : voting-service
+          servicePort : 80
+
+

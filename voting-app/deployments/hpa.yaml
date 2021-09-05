@@ -9,8 +9,8 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: frontend-deployment
-  minReplicas: 1
-  maxReplicas: 2
+  minReplicas: 2
+  maxReplicas: 10
   metrics:
     - type: Resource
       resource:
@@ -24,5 +24,7 @@ spec:
         target:
           type: Utilization
           averageUtilization: 70
+
+          
 
 
